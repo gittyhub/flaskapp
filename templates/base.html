@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">   <!-- more jinja2 syntax -->
+    {% block head %}{% endblock %}  <!-- this is jinja2 syntax, template engine that flask uses -->
+                                    <!-- this block is where we are going to insert the code where other -->
+			            <!-- pages will INHERIT from and where we will be puting our python code -->
+  </head>
+  <body>
+    {% block body %}{% endblock %}  <!-- once you have this jinja2 syntax template, you can remove the --> 
+     <script src="index.js"></script> <!-- html code from the index.html -->
+  </body>
+</html>
